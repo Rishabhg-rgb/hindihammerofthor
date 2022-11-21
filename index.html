@@ -402,7 +402,7 @@
 
 		$('form').on('submit', function (e) {
 
-			e.preventDefault();
+// 			e.preventDefault();
 			$('#succ-msg').empty();
 
 			var campid = '';
@@ -414,29 +414,29 @@
 				return false;
 			}
 
-			$.ajax({
-				type: 'post',
-				url: 'order.php',
-				data: $('form').serialize(),
-				beforeSend: function () {
-					$('.btn_submit').empty();
-					$('.btn_submit').html('Saving, please wait...');
-					$('.btn_submit').attr('disabled', true);
-				},
-				success: function (res) {
-					if (typeof campid !== 'undefined') {
-						var reurl = "https://www.bigpenis.com";
-					}
+// 			$.ajax({
+// 				type: 'post',
+// 				url: 'order.php',
+// 				data: $('form').serialize(),
+// 				beforeSend: function () {
+// 					$('.btn_submit').empty();
+// 					$('.btn_submit').html('Saving, please wait...');
+// 					$('.btn_submit').attr('disabled', true);
+// 				},
+// 				success: function (res) {
+// 					if (typeof campid !== 'undefined') {
+// 						var reurl = "https://www.bigpenis.com";
+// 					}
 
-					// var reurl2 = "thankyou.php?p="+res;
-					location.href = reurl;
-				},
-				complete: function () {
-					$('.btn_submit').empty();
-					$('.btn_submit').html('<span>50% छूट के साथ </br>ऑर्डर कीजें</span>');
-					$('.btn_submit').attr('disabled', false);
-				}
-			});
+// 					// var reurl2 = "thankyou.php?p="+res;
+// 					location.href = reurl;
+// 				},
+// 				complete: function () {
+// 					$('.btn_submit').empty();
+// 					$('.btn_submit').html('<span>50% छूट के साथ </br>ऑर्डर कीजें</span>');
+// 					$('.btn_submit').attr('disabled', false);
+// 				}
+// 			});
 		});
 
 	});
